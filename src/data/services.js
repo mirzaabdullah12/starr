@@ -1,0 +1,111 @@
+import img1 from "../assets/tech.avif";
+import img2 from "../assets/asth.jpg";
+import img3 from "../assets/kk.webp";
+import img4 from "../assets/ddd.webp";
+import img5 from "../assets/oip.jpg";
+import img6 from "../assets/ff.jpg";
+
+export const services = [
+  {
+    slug: "web-development",
+    icon: "🌐",
+    title: "Web Development",
+    color: "#60a5fa",
+    image: img1,
+    desc: "Custom, fast, and scalable web applications built with modern frameworks tailored to your business needs.",
+    longDesc: "We build high-performance web applications from scratch using the latest technologies. Whether it's a corporate website, SaaS platform, or a complex web app — we deliver clean code, fast load times, and beautiful UI that converts visitors into customers.",
+    tags: ["React", "Next.js", "Node.js", "TypeScript", "REST APIs"],
+    features: ["Custom UI/UX design", "SEO-friendly architecture", "API development & integration", "CMS integration", "Performance optimization"],
+    process: [
+      { step: "01", title: "Discovery", desc: "We understand your business goals, target audience, and technical requirements." },
+      { step: "02", title: "Design", desc: "Wireframes and high-fidelity designs crafted in Figma for your approval." },
+      { step: "03", title: "Development", desc: "Clean, scalable code built with modern frameworks and best practices." },
+      { step: "04", title: "Launch", desc: "Testing, deployment, and post-launch support to keep things running smoothly." },
+    ],
+  },
+  {
+    slug: "pos-systems",
+    icon: "🖥️",
+    title: "POS Systems",
+    color: "#a78bfa",
+    image: img2,
+    desc: "Complete point-of-sale solutions for retail and restaurants — inventory, billing, and analytics in one place.",
+    longDesc: "Our POS systems are built specifically for Pakistani businesses — supporting retail stores, restaurants, pharmacies, and more. Full inventory control, staff management, and real-time reporting all in one unified system.",
+    tags: ["Retail", "Restaurant", "Inventory", "Billing", "Analytics"],
+    features: ["Inventory & stock management", "Barcode & QR scanning", "Multi-branch support", "Daily/monthly reports", "Offline mode support"],
+    process: [
+      { step: "01", title: "Business Analysis", desc: "We study your operations — products, staff, branches, and reporting needs." },
+      { step: "02", title: "System Design", desc: "Custom POS interface designed for your specific business type." },
+      { step: "03", title: "Development", desc: "Built with offline support, fast performance, and easy staff training in mind." },
+      { step: "04", title: "Installation", desc: "On-site setup, staff training, and full technical support included." },
+    ],
+  },
+  {
+    slug: "shopify-stores",
+    icon: "🛒",
+    title: "Shopify Stores",
+    color: "#34d399",
+    image: img3,
+    desc: "Professional Shopify store setup, custom themes, and integrations to grow your e-commerce business.",
+    longDesc: "From basic store setup to fully custom Shopify themes — we handle everything. Product uploads, payment gateway integration, shipping rules, discount systems, and ongoing support to keep your store running smoothly.",
+    tags: ["Shopify", "E-commerce", "Theme Dev", "Liquid", "Shopify Plus"],
+    features: ["Custom theme development", "Payment gateway setup", "Product catalog management", "Shopify apps integration", "Conversion rate optimization"],
+    process: [
+      { step: "01", title: "Store Strategy", desc: "We plan your store structure, product categories, and customer journey." },
+      { step: "02", title: "Design", desc: "Custom theme or premium theme customization matching your brand identity." },
+      { step: "03", title: "Setup & Integration", desc: "Payment gateways, shipping, taxes, and third-party app integrations." },
+      { step: "04", title: "Launch & Grow", desc: "Store launch with SEO setup, analytics, and ongoing optimization support." },
+    ],
+  },
+  {
+    slug: "mobile-apps",
+    icon: "📱",
+    title: "Mobile Apps",
+    color: "#f472b6",
+    image: img4,
+    desc: "Cross-platform mobile applications for iOS and Android with smooth UX and powerful backends.",
+    longDesc: "We develop mobile apps that work seamlessly on both iOS and Android using React Native. From concept to App Store launch — we handle design, development, testing, and deployment with ongoing maintenance.",
+    tags: ["React Native", "iOS", "Android", "Firebase", "Expo"],
+    features: ["Cross-platform development", "Push notifications", "Offline functionality", "App Store submission", "Backend API development"],
+    process: [
+      { step: "01", title: "Concept & Planning", desc: "Feature planning, user flow mapping, and technical architecture design." },
+      { step: "02", title: "UI/UX Design", desc: "Mobile-first screens designed for intuitive and delightful user experience." },
+      { step: "03", title: "Development", desc: "React Native development with clean architecture and performance focus." },
+      { step: "04", title: "Launch", desc: "App Store & Play Store submission, reviews handling, and post-launch support." },
+    ],
+  },
+  {
+    slug: "custom-software",
+    icon: "🔧",
+    title: "Custom Software",
+    color: "#fb923c",
+    image: img5,
+    desc: "Tailor-made software solutions from CRMs to ERPs — built exactly the way your business works.",
+    longDesc: "Every business is unique. We build custom software that fits your exact workflow — whether it's a CRM for your sales team, an ERP for operations, or a custom booking system. We map your process and build it precisely.",
+    tags: ["CRM", "ERP", "Automation", "Web App", "Database"],
+    features: ["Requirement analysis & planning", "Custom workflow automation", "Role-based access control", "Data import/export", "Training & documentation"],
+    process: [
+      { step: "01", title: "Requirement Gathering", desc: "Deep-dive sessions to fully understand your business process and pain points." },
+      { step: "02", title: "Architecture", desc: "System design, database schema, and module planning for scalability." },
+      { step: "03", title: "Development", desc: "Agile development with regular demos and feedback incorporation." },
+      { step: "04", title: "Handover", desc: "Full documentation, staff training, and dedicated support period." },
+    ],
+  },
+  {
+    slug: "ui-ux-design",
+    icon: "🎨",
+    title: "UI/UX Design",
+    color: "#f87171",
+    image: img6,
+    desc: "Beautiful, intuitive interfaces designed with a user-first mindset — from wireframes to final product.",
+    longDesc: "Great software starts with great design. Our design process begins with understanding your users, mapping their journey, and crafting pixel-perfect interfaces in Figma — ready for seamless developer handoff.",
+    tags: ["Figma", "Prototyping", "Branding", "Wireframes", "Design System"],
+    features: ["User research & personas", "Wireframing & prototyping", "High-fidelity Figma designs", "Design system creation", "Developer-ready assets"],
+    process: [
+      { step: "01", title: "Research", desc: "User research, competitor analysis, and defining the design direction." },
+      { step: "02", title: "Wireframes", desc: "Low-fidelity wireframes to map out structure and user flows." },
+      { step: "03", title: "Visual Design", desc: "High-fidelity designs with your brand colors, typography, and components." },
+      { step: "04", title: "Handoff", desc: "Organized Figma files with specs, assets, and developer documentation." },
+    ],
+  },
+];

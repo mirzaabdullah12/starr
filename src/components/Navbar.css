@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ─── Navbar Shell ─── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  border-radius: 0;
+  padding: 0 40px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(7, 8, 15, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
+  font-family: 'Inter', sans-serif;
+  animation: navSlideDown 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes navSlideDown {
+  from { opacity: 0; transform: translateY(-24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav--scrolled {
+  background: rgba(7, 8, 15, 0.97);
+  border-bottom-color: rgba(124, 58, 237, 0.2);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── Logo ─── */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+
+  animation: fadeInLeft 0.6s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.nav__logo-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nav__logo:hover .nav__logo-badge {
+  transform: rotate(-8deg) scale(1.08);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.55);
+}
+
+.nav__logo-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  letter-spacing: -0.3px;
+}
+
+.nav__logo-name span {
+  color: #a78bfa;
+  margin-left: 4px;
+}
+
+/* ─── Desktop Menu ─── */
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  animation: fadeInDown 0.6s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav__item {
+  position: relative;
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+  letter-spacing: 0.1px;
+}
+
+.nav__item::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+  transition: width 0.25s ease;
+}
+
+.nav__item:hover {
+  color: #f1f5f9;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav__item:hover::after {
+  width: 60%;
+}
+
+/* ─── CTA Button ─── */
+.nav__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  padding: 9px 20px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3);
+  transition: transform 0.18s, box-shadow 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+
+  animation: fadeInRight 0.6s 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* shimmer effect on CTA */
+.nav__btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+  transform: skewX(-20deg);
+  animation: shimmer 3s 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0%   { left: -75%; }
+  60%, 100% { left: 130%; }
+}
+
+.nav__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(124, 58, 237, 0.45);
+}
+
+.nav__btn:active {
+  transform: translateY(0);
+}
+
+.nav__btn--full {
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* ─── Hamburger ─── */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 9px;
+  cursor: pointer;
+  padding: 8px;
+  transition: background 0.2s;
+}
+.nav__toggle:hover { background: rgba(124,58,237,0.15); }
+.nav__toggle span {
+  display: block; height: 2px; background: #e2e8f0;
+  border-radius: 2px; transition: transform 0.3s, opacity 0.3s;
+  transform-origin: center;
+}
+
+.nav__toggle--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__toggle--open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav__toggle--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ─── Mobile Drawer ─── */
+.nav__drawer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.38s cubic-bezier(0.4,0,0.2,1);
+  background: rgba(7,8,15,0.98);
+}
+.nav__drawer--open {
+  max-height: 360px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-bottom: 16px;
+}
+.nav__drawer-item {
+  display: block; text-decoration: none; color: #64748b;
+  font-size: 0.9rem; font-weight: 500; padding: 11px 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: color 0.2s, padding-left 0.2s;
+}
+.nav__drawer-item:hover { color: #a78bfa; padding-left: 8px; }
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .nav {
+    padding: 0 18px;
+    height: auto;
+    min-height: 60px;
+  }
+
+  .nav__inner {
+    height: 60px;
+  }
+
+  .nav__menu,
+  .nav__btn:not(.nav__btn--full) {
+    display: none;
+  }
+
+  .nav__toggle,
+  .nav__drawer {
+    display: flex;
+  }
+
+  .nav__toggle {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav__drawer {
+    display: none;
+  }
+}
